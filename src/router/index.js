@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: sueRimn
+ * @Date: 2019-10-09 15:38:56
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2019-10-09 16:28:24
+ */
 import Vue from 'vue'
 import Router from 'vue-router'
 
@@ -379,6 +387,18 @@ export const asyncRoutes = [
       {
         path: 'https://github.com/PanJiaChen/vue-element-admin',
         meta: { title: 'External Link', icon: 'link' }
+      }
+    ]
+  },
+  {
+    path: '/client',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/client/index'),
+        name: 'client',
+        meta: { title: 'Customer Management', icon: 'clipboard' }
       }
     ]
   },
