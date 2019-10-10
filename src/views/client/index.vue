@@ -1,23 +1,37 @@
-<!--
- * @Descripttion:
- * @version:
- * @Author: sueRimn
- * @Date: 2019-10-09 15:49:19
- * @LastEditors: sueRimn
- * @LastEditTime: 2019-10-09 16:26:51
- -->
 <template>
   <div>
-    www
+    <Table />
   </div>
 </template>
-
 <script>
-export default {
 
+import Table from './table'
+export default {
+  components: {
+    Table
+  },
+  props: {
+
+  },
+  data() {
+    return {
+
+    }
+  },
+  computed: {
+
+  },
+  created() {
+
+  },
+  mounted() {
+
+  },
+  methods: {
+
+  }
 }
 </script>
-
-<style>
+<style scoped lang="">
 
 </style>

@@ -19,7 +19,9 @@ service.interceptors.request.use(
       // let each request carry token
       // ['X-Token'] is a custom headers key
       // please modify it according to the actual situation
-      config.headers['X-Token'] = getToken()
+      // config.headers['X-Token'] = getToken()
+      config.headers['token'] = 'eyJhbGciOiJIUzI1NiJ9.eyJvZmZpY2VfaWQiOiI0ZDc5MmUzMTZhMDUxMWU2YWE3NjAwMTYzZTE2MmFkZCIsImRldmljZVR5cGUiOiJ3ZWIiLCJvZmZpY2VfbmFtZSI6ImlDb3VydCIsInVzZXJfdHlwZSI6IkEiLCJ1c2VyX2lkIjoiMDFDRUI0RTE2RDI0MTFFNkE1QzIwMDE2M0UwMDIwRDEiLCJsb2dpblR5cGUiOiIyIiwidXNlcl9uYW1lIjoi546L5YKoMSIsImlzcyI6ImlMYXcuY29tIiwiZXhwIjoxNTczMjcwMzY0MjY2LCJpYXQiOjE1NzA2NzgzNjQyNjYsIm9mZmljZVR5cGUiOiJpbnRlZ3JhdGlvbiJ9.uiuaaT-nuQg4fbI-Be1522qkbUfFK7EnETZoTqgVJyo'
+      config.headers['token'] = getToken()
     }
     return config
   },
@@ -33,15 +35,15 @@ service.interceptors.request.use(
 // response interceptor
 service.interceptors.response.use(
   /**
-   * If you want to get http information such as headers or status
-   * Please return  response => response
-  */
+     * If you want to get http information such as headers or status
+     * Please return  response => response
+     */
 
   /**
-   * Determine the request status by custom code
-   * Here is just an example
-   * You can also judge the status by HTTP Status Code
-   */
+     * Determine the request status by custom code
+     * Here is just an example
+     * You can also judge the status by HTTP Status Code
+     */
   response => {
     const res = response.data
 
