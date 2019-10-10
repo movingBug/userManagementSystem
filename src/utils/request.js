@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: sueRimn
+ * @Date: 2019-10-09 15:38:56
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2019-10-10 11:32:49
+ */
 import axios from 'axios'
 import { MessageBox, Message } from 'element-ui'
 import store from '@/store'
@@ -7,7 +15,10 @@ import { getToken } from '@/utils/auth'
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
   // withCredentials: true, // send cookies when cross-domain requests
-  timeout: 5000 // request timeout
+  timeout: 5000, // request timeout
+  headers: {
+    'token': getToken('token')
+  }
 })
 
 // request interceptor

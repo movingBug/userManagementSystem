@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: sueRimn
+ * @Date: 2019-10-09 15:38:56
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2019-10-10 11:51:48
+ */
 import request from '@/utils/request'
 
 export function login(data) {
